@@ -1,15 +1,15 @@
 class RegGen{
   constructor(){
-    regexRes:''
   }
   createRegex(op){
+    var regexRes;
     if(op.toLowerCase() == "email"){
-      this.regexRes = /^[a-zA-Z][\w.]+@[a-z]+.[a-z]+.?[a-z]+$/
+      regexRes = /^[a-zA-Z][\w.]+@[a-z]+.[a-z]+.?[a-z]+$/
     }
     else if (op.toLowerCase() == "username"){
-      this.regexRes = /^[A-Za-z]\w+$/
+      regexRes = /^[A-Za-z]\w+$/
     }
-    return this.regexRes
+    return regexRes
   }
 
   test(text,op){
